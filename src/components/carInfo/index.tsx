@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Flex } from "vcc-ui";
+import { Text, Flex, Block } from "vcc-ui";
 import { ICar } from "types/cars";
 import { CarInfoContainer } from "./style";
 import { CarLinks } from "./links";
@@ -34,7 +34,9 @@ export const CarInfo = (props: ICarInfoProps) => {
           </Flex>
         </Flex>
         <Flex className="car-image">
-          <img src={imageUrl} alt={modelName} />
+          <Block as="picture" className="image-container">
+            <img src={imageUrl} alt={modelName} />
+          </Block>
         </Flex>
       </Flex>
       <CarLinks

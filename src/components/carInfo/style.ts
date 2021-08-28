@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const CarInfoContainer = styled.div`
   box-shadow: none;
   padding: 12px;
+  height: 100%;
+  overflow: hidden;
   .car-info-link {
     flex: 1 1 auto;
     text-transform: none;
@@ -39,9 +41,23 @@ export const CarInfoContainer = styled.div`
     }
     .car-image {
       margin: 16px 0;
-      max-height: 100%;
-      img {
-        object-fit: cover;
+      position: relative;
+      .image-container {
+        max-height: 100%;
+        min-height: 1px;
+        height: auto;
+        width: 100%;
+        padding: 0 0 75% 0;
+        overflow: hidden;
+        position: relative;
+        img {
+          object-fit: cover;
+          object-position: center center;
+          transform: scale(1.01);
+          height: 100%;
+          width: 100%;
+          position: absolute;
+        }
       }
     }
   }
