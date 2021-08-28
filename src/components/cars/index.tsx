@@ -26,7 +26,7 @@ export const Cars = () => {
       >
         Volvo Cars
       </Text>
-      {cars && <CarsList cars={cars} />}{" "}
+      {cars && <CarsList cars={cars} />}
     </>
   );
 };
