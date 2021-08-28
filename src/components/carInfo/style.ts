@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const CarInfoContainer = styled.div`
   box-shadow: none;
   padding: 12px;
-  height: 100%;
   .car-info-link {
     flex: 1 1 auto;
     text-transform: none;
