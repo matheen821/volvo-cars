@@ -1,14 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { StyleProvider, ThemePicker } from "vcc-ui";
+import { Cars, Learn, Shop } from "./components";
+import "./index.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <StyleProvider>
+      <ThemePicker>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Cars} />
+            <Route path="/learn/:id" component={Learn} />
+            <Route path="/shop/:id" component={Shop} />
+          </Switch>
+        </Router>
+      </ThemePicker>
+    </StyleProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
