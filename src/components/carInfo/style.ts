@@ -40,6 +40,9 @@ export const CarInfoContainer = styled.div`
     .car-image {
       margin: 16px 0;
       max-height: 100%;
+      img {
+        object-fit: cover;
+      }
     }
   }
   .links {
